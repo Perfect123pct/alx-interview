@@ -1,24 +1,14 @@
-def pascal_triangle(n):
-    if n <= 0:
-        return []
-
-    triangle = []
-    for i in range(n):
-        row = [1] * (i + 1)
-        if i > 1:
-            for j in range(1, i):
-                row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
-        triangle.append(row)
-
-    return triangle
-
-# Test the function with the provided main
-def print_triangle(triangle):
-    """
-    Print the triangle
-    """
-    for row in triangle:
-        print("[{}]".format(",".join([str(x) for x in row])))
-
-if __name__ == "__main__":
-    print_triangle(pascal_triangle(5))
+def pascal_triangle(M):
+    a=[[] for i in range(M)]
+    for i in range(M):
+        for j in range(i+1):
+            if(j<i):
+                if(j==0):
+                    a[i].append(1)
+                else:
+                    a[i].append(a[i-1][j]+a[i-1][j-1])
+            elif(j==i):
+                a[i].append(1)
+    return a
+M=5
+print(pascal_triangle(M))
