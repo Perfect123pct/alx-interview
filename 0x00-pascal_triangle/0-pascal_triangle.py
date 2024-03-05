@@ -1,4 +1,3 @@
-guillaume@ubuntu:~/0x00$ cat 0-main.py
 #!/usr/bin/python3
 """
 Pascal Triangle
