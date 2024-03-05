@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""
+Pascal triangle
+"""
+
 def pascal_triangle(M):
     a=[[] for i in range(M)]
     for i in range(M):
